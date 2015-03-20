@@ -3,9 +3,116 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".log_in">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".log_in"
+    android:clickable="true"
+    android:background="@drawable/background_log_in">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem Vindo ao Security Priority"
+        android:id="@+id/txtWelcome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="25dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite suas credenciais"
+        android:id="@+id/txtCredential"
+        android:layout_below="@+id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtEmail"
+        android:layout_below="@+id/txtCredential"
+        android:layout_marginTop="139dp"
+        android:layout_alignRight="@+id/txtWelcome"
+        android:hint="Digite seu email"
+        android:layout_alignEnd="@+id/txtWelcome"
+        android:textColorHint="#696969"
+        android:layout_toRightOf="@+id/imgEmail"
+        android:layout_toEndOf="@+id/imgEmail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edtPassword"
+        android:layout_below="@+id/edtEmail"
+        android:layout_marginTop="43dp"
+        android:layout_alignRight="@+id/edtEmail"
+        android:hint="Digite sua senha"
+        android:layout_alignEnd="@+id/edtEmail"
+        android:textColor="#ff696969"
+        android:password="true"
+        android:layout_toRightOf="@+id/imgPassword"
+        android:layout_toEndOf="@+id/imgPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esqueci minha senha"
+        android:id="@+id/txtEsqueciSenha"
+        android:layout_below="@+id/edtPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logar"
+        android:id="@+id/btnSignIn"
+        android:minWidth="200dp"
+        android:layout_marginBottom="68dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txtCredential"
+        android:layout_alignEnd="@+id/txtCredential"
+        android:longClickable="false"
+        android:elegantTextHeight="false"
+        android:contentDescription="@string/abc_action_mode_done" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Criar minha Conta"
+        android:id="@+id/btnCreateMyAccount"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnSignIn"
+        android:layout_alignStart="@+id/btnSignIn"
+        android:layout_marginBottom="26dp"
+        android:layout_alignRight="@+id/txtCredential"
+        android:layout_alignEnd="@+id/txtCredential" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgEmail"
+        android:background="@drawable/email"
+        android:layout_alignTop="@+id/edtEmail"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgPassword"
+        android:background="@drawable/password"
+        android:layout_alignTop="@+id/edtPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
