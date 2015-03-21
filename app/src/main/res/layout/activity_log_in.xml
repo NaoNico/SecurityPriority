@@ -95,7 +95,8 @@
         android:layout_alignStart="@+id/btnSignIn"
         android:layout_marginBottom="26dp"
         android:layout_alignRight="@+id/txtCredential"
-        android:layout_alignEnd="@+id/txtCredential" />
+        android:layout_alignEnd="@+id/txtCredential"
+        android:onClick="clickBtnCreateMyAccount" />
 
     <ImageView
         android:layout_width="wrap_content"
